@@ -1,0 +1,119 @@
+<div class="header">
+    <div class="logo">Hospital</div>
+    <nav class="navbar">
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/contact">Contact</a>
+
+    </nav>
+</div>
+<div class="container">
+    <div class="radio-button-container left">
+        <div class="radio-button">
+            <input type="radio" class="radio-button__input" id="radio1" name="radio-group" (click)="selectedOption = 'profile'">
+            <label class="radio-button__label" for="radio1">
+                <span class="radio-button__custom"></span>
+                Profile
+            </label>
+        </div>
+        <div class="radio-button">
+            <input type="radio" class="radio-button__input" id="radio2" name="radio-group" (click)="selectedOption = 'prescription'">
+            <label class="radio-button__label" for="radio2">
+                <span class="radio-button__custom"></span>
+                Prescription
+            </label>
+        </div>
+    </div>
+
+    <div class="profile-details-container right" *ngIf="selectedOption === 'profile'">
+       
+            <div class="profile-detail">
+                <label for="firstName">First Name:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+         
+                <label for="lastName">Last Name:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+            </div>
+            <div class="profile-detail">
+                <label for="dob">Date of Birth:</label>
+                <div class="input-container">
+                    <input type="date" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+        
+                <label for="gender">Gender:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+            </div>
+            <div class="profile-detail">
+                <label for="address1">Address 1:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+           
+                <label for="address2">Address 2:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+            </div>
+            <div class="profile-detail">
+                <label for="phoneNumber">Phone Number:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+           
+                <label for="email">Email:</label>
+                <div class="input-container">
+                    <input type="email" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div> 
+            </div>
+              <div class="profile-detail">
+         
+                <label for="medicalLicense">Medical License Number:</label>
+                <div class="input-container">
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+                </div>
+         
+                <label for="specialty">Specialty:</label>
+                  <div class="input-container">
+                <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName">
+            </div>
+            </div>
+            <button class="edit-profile-button">Edit Profile</button>
+        </div>
+  
+    
+
+
+    <div class="prescription-details-container right" *ngIf="selectedOption === 'prescription'">
+   
+        <div class="table">
+            <table>
+             
+                <thead>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Dosage</th>
+                    <th>Frequency</th>
+                    <th>Instructions</th>
+                </tr>
+                </thead>
+           
+                <tbody>
+                <tr *ngFor="let prescription of prescriptionRows">
+                    <td>{{ prescription[0] }}</td>
+                    <td>{{ prescription[1] }}</td>
+                    <td>{{ prescription[2] }}</td>
+                    <td>{{ prescription[3] }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+  </div>

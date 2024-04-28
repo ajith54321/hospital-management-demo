@@ -1,0 +1,76 @@
+<div class="header">
+    <div class="logo">Hospital</div>
+    <nav class="navbar">
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/contact">Contact</a>
+
+    </nav>
+</div>
+<div class="getMsg">
+    <h1>   {{ getMessage() }}</h1>
+</div>
+
+<div class="logIn">
+    <mat-tab-group animationDuration="1000ms" [(selectedIndex)]="selectedTabIndex">
+        <mat-tab label="PATIENT">
+            <div class="example-container">
+                <div class="centered-content">
+                    <div class="form-container">
+                        <p>Login</p>
+                  
+                        <form class="form" (ngSubmit)="onSubmit()">
+                            <label>UserID</label>
+                            <input type="text" class="input" placeholder="Enter your UserID">
+                            <label>Password</label>
+                            <input type="password" class="input" placeholder="Password"> 
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+  
+        <mat-tab label="PHYSICIAN">
+            <div class="example-container">
+                <div class="centered-content">
+                    <div class="form-container">
+                        <p>Login</p>
+                        
+                    <form class="form">
+                        <label>UserID</label>
+                        <input type="text" class="input" placeholder="Enter your UserID">
+                        <label>Password</label>
+                        <input type="password" class="input" placeholder="Password"> 
+                        <button>Submit</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+  
+        <mat-tab label="PHARMACIST">
+            <div class="example-container">
+                <div class="centered-content">
+                    <div class="form-container">
+                        <p>Login</p>
+                      
+                    <form class="form">
+                        <label>UserID</label>
+                        <input type="text" class="input" placeholder="Enter your UserID">
+                        <label>Password</label>
+                        <input type="password" class="input" placeholder="Password"> 
+                        <button>Submit</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>
+
+
+
+
